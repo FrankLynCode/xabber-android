@@ -30,6 +30,7 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Gravity;
@@ -563,7 +564,7 @@ public class ContactList extends ManagedActivity implements OnAccountChangedList
 
     @Override
     public void onContactListChange(CommonState commonState) {
-
+        Log.w("ContactList State", commonState.name());
         switch (commonState) {
 
             case empty:
