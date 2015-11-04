@@ -103,6 +103,14 @@ public class AccountAddFragment extends Fragment implements View.OnClickListener
 //            return;
 //        }
 
+        String user = userView.getText().toString();
+
+        if(user.contains("@")){
+            Toast.makeText(getActivity(), getString(R.string.EXIST_SERVER_NAME), Toast.LENGTH_LONG).show();
+            return;
+        }
+        user+="@"+getString(R.string.CONFIG_SERVER_NAME);
+
         if (createAccountCheckBox.isChecked() &&
                 !passwordView.getText().toString().contentEquals(passwordConfirmEditText.getText().toString())) {
             Toast.makeText(getActivity(), getString(R.string.CONFIRM_PASSWORD), Toast.LENGTH_LONG).show();
@@ -114,8 +122,9 @@ public class AccountAddFragment extends Fragment implements View.OnClickListener
         String account;
         try {
             account = AccountManager.getInstance().addAccount(
-                    userView.getText().toString(),
-                    passwordView.getText().toString(), AccountManager.getInstance().getAccountTypes().get(0),
+                    user,
+                    passwordView.getText().toString(),
+                    AccountManager.getInstance().getAccountTypes().get(0),
                     false,
                     storePasswordView.isChecked(),
                     false,//useOrbotView.isChecked(),

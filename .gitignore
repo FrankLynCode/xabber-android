@@ -6,3 +6,5 @@ build
 *.apk
 app/manifest-merger-release-report.txt
 *~*
+
+xabber/src/main/res/values/server_config.xml
