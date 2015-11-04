@@ -22,7 +22,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="16dp">
-
+<!--
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             android:paddingTop="4dip"
             android:prompt="@string/account_type"
             />
-
+-->
 
         <LinearLayout
             android:id="@+id/auth_panel"
@@ -81,13 +81,14 @@
                 android:text="@string/account_store_password" />
 
         </LinearLayout>
-
+<!--
         <CheckBox
             android:id="@+id/use_orbot"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:checked="false"
             android:text="@string/account_use_orbot" />
+          -->
 
         <CheckBox
             android:id="@+id/register_account"
@@ -117,10 +118,10 @@
                 android:text="" />
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/account_help"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:autoLink="all" />
+        <!--<TextView-->
+            <!--android:id="@+id/account_help"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:autoLink="all" />-->
     </LinearLayout>
 </ScrollView>
