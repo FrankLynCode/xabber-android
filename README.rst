@@ -18,6 +18,7 @@ Xabber uses Gradle build system. The only specific thing is git submodule for ot
 And otr4j would be cloned to your local repository. 
 
  ::
+ 
  cp ./server_config_demo.xml xabber/src/main/res/values/server_config.xml
 
 Then specify your server settings.
